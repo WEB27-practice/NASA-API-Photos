@@ -23,11 +23,10 @@ const App = () => {
 
   const [daily, setDaily] = useState([]);
   // const [newDate, setNewDate] = useState(`2014-10-12`);
-  const [newDate, setNewDate] = useState(`2014-10-15`);
+  const [newDate, setNewDate] = useState(`2014-05-11`);
 
   useEffect(() => {
       
-
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=O1yRgiiJB1AfSVJkCNslz1fyPqmSFSRqkt2pMfvE&date=${date}`)
       .then(res => {
         console.log(res.data)
