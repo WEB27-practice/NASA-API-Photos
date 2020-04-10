@@ -10,8 +10,7 @@ justify-content: center;
 align-items: center;
 margin: 2rem;
 padding: 2rem;
-background-color: rgba(0, 0, 0, .5);
-border-radius: 50px 50px 50px 50px;
+border-radius: 0.5rem;
 opacity: 0.5;
 :hover {
     opacity: 1;
@@ -26,7 +25,7 @@ const PhotoBox = styled.div`
     margin: 2rem;
     padding: 2rem;
     background-color: rgba(0, 0, 0, .5);
-    border-radius: 5px 50px 5px 50px;
+    border-radius: 0.5rem;
     opacity: 0.1;
     :hover {
         opacity: 1;
