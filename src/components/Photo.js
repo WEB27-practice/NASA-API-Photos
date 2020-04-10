@@ -10,6 +10,10 @@ const PhotoBox = styled.div`
     padding: 2rem;
     background-color: rgba(0, 0, 0, .5);
     border-radius: 5px 50px 5px 50px;
+    opacity: 0.1;
+    :hover {
+        opacity: 1;
+    }
 `;
 
 const Explanation = styled.p`

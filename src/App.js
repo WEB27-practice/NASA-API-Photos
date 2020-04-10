@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import Header from "./components/Header.js";
 import PhotoContainer from "./components/PhotoContainer.js";
+import { Route } from "react-router-dom";
 
 
 const DateBox = styled.div`
@@ -22,17 +23,14 @@ const App = () => {
 
 
   const [daily, setDaily] = useState([]);
-  // const [newDate, setNewDate] = useState(`2014-10-12`);
   const [newDate, setNewDate] = useState(`2014-05-11`);
 
   useEffect(() => {
       
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=O1yRgiiJB1AfSVJkCNslz1fyPqmSFSRqkt2pMfvE&date=${date}`)
       .then(res => {
-        console.log(res.data)
         setDaily(res.data);
         const grab = document.querySelector('.App');
-        console.log(grab);
         const backgroundImg = res.data.url;
         grab.style.background = 'url("'+backgroundImg+'") repeat center center/cover';   
       })
@@ -45,11 +43,8 @@ const App = () => {
     const handleChange = (e) => {
       console.log(e.target.value)
       return (e.target.value < `1995-06-16` ? alert(`There are no pictures past June 16th, 1995. Please select another date and try again.`) : setNewDate(e.target.value));
-      // setNewDate(e.target.value);
-      // console.log(newDate);
     }
     
-     // const date = '2014-10-12';
     const date = newDate;
 
     const handleSubmit = (e) => {
@@ -68,7 +63,6 @@ const App = () => {
       }, []);
     };
     
-   
   return (
     <div className="App" >
         <Header />
@@ -80,7 +74,9 @@ const App = () => {
             </div>
           </form>
         </DateBox>
-        <PhotoContainer data={daily}/>
+        <Route exact path="/">
+          <PhotoContainer data={daily}/>
+        </Route>
     </div>
   );
 }
