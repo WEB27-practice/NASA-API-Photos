@@ -11,8 +11,8 @@ const Header = () => {
                 <ul className='nav-list'>
                     <li className='link'><Link to="/">Home</Link></li>
                     <li className='link'><Link to="/about" >About</Link></li>
-                    <li className='link'><a href="https://www.nasa.gov/" target="_blank">NASA</a></li>
-                    <li className='link'><a href="https://api.nasa.gov/" target="_blank">NASA API Key</a></li>
+                    <li className='link'><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer" >NASA</a></li>
+                    <li className='link'><a href="https://api.nasa.gov/" target="_blank" rel="noopener noreferrer" >NASA API Key</a></li>
                 </ul>
             </nav>
         </div>
