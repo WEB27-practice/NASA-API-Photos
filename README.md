@@ -2,9 +2,9 @@
 
 ## How to use:
 
-1). Select a date
-2). Click the 'Get a new image' button
-3). Watch the background change
+  1). Select a date
+  2). Click the 'Get a new image' button
+  3). Watch the background change
 
 The purpose of this project is to showcase NASA's Picture of the Day. Therefore, I have prioritized the image set to the background by making the calendar and accompanying description almost completely see-through. You can read the text by moving the mouse over the text.
 
